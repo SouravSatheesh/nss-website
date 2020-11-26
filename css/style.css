@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*-------------------------------------------------------------
+=======================  Header  ==============================
+---------------------------------------------------------------*/
+#header {
+	transition: all 0.5s;
+	background-color: #ffffff00;
+    z-index: 1000;
+    height: 83px;
+}
+
+#header .logo img {
+	height: 60px;
+	margin: 10px 0 5px 0;
+}
+
+
+@media (max-width: 1199px) {
+	
+	#header .logo img {
+		height: 50px;
+		margin: 10px 0 3px 0;
+	}
+}
+
+/*-------------------------------------------------------------
+=====================  Navigation Menu  =======================
+---------------------------------------------------------------*/
+
+/* Desktop Navigation */
+.nav-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+.nav-menu li a {
+    padding: 25px 5px 25px 5px;
+    font-weight: 600;
+}
+
+.nav-menu > ul {
+	display: flex;
+}
+ 
+.nav-menu > ul > li {
+	position: relative;
+	white-space: nowrap;
+}
+  
+.nav-menu a {
+	display: block;
+	color: rgb(108, 72, 72);
+	transition: 0.3s;
+}
+
+.nav-menu li a:hover, .nav-menu li  .active {
+	color:#14054B;
+}
+
+@media (min-width: 992px) {
+	.nav-menu li a {
+		font-size: 20px;
+		padding-left: 15px;
+	}
+}
+
+
+/* Mobile Navigation */
+
+.hamburger {
+    position: fixed;
+	cursor: pointer;
+	top: 20px;
+	right: 20px;
+	z-index: 1501;
+}
+
+.hamburger .line1, .hamburger .line2, .hamburger .line3 {
+    width: 27px;
+    height: 3px;
+    background: rgb(0, 0, 0);
+	margin: 5px;
+	transition: all 0.5s ease;
+}
+
+.nav-close-icon .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-close-icon .line2 {
+	opacity: 0;
+}
+
+.nav-close-icon .line3 {
+	transform: rotate(45deg) translate(-5px,-6px);
+}
+  
+.mobile-nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 40vw;
+	z-index: 1300;
+	overflow-y: auto;
+	background: #fff;
+	transition: left 1s ease;
+	opacity: 0;
+	visibility: hidden;
+    padding-top: 40px;
+    display: block;
+    padding-left: 30px;
+}
+  
+.mobile-nav * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+  
+.mobile-nav a {
+	display: block;
+	position: relative;
+	color: #191919;
+	padding: 10px 20px;
+	font-weight: 500;
+	outline: none;
+}
+  
+.mobile-nav a:hover, .mobile-nav .active  {
+	color: #e82d2d;
+	text-decoration: none;
+}
+  
+.mobile-nav-overly {
+	width: 100%;
+	height: 100%;
+	z-index: 1200;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.6);
+	overflow: hidden;
+	display: none;
+	transition: ease-in-out 0.2s;
+}
+  
+.mobile-nav-active {
+	overflow: hidden;
+}
+  
+.mobile-nav-active .mobile-nav {
+	opacity: 1;
+	visibility: visible;
+}
+  
+.mobile-nav-active .mobile-nav-toggle i {
+	color: #fff;
+}
+
+@media(max-width: 500px){
+    .mobile-nav{
+        width: 50vw;
+        padding-left: 0;
+    }
+}
+
+/*-------------------------------------------------------------
+=====================  Home Page  =======================
+---------------------------------------------------------------*/
+
+.homepage {
+    padding-top: 83px;
+    background: url('../images/LFB1.png') center top;
+    background-size: cover;
+    width: 100vw;
+    min-height: fit-content;
+}
+
+@media(min-width: 992px){
+    .homepage{
+        height: 100vh;
+    }
+}
+
+/* ----- Timeline ---- */
+
+.timeline {
+    padding-top: 10vh;
+    margin-left: 70px;
+}
+
+.timeline ol{
+    list-style-type: none;
+}
+
+.timeline li {
+    position: relative;
+    padding-bottom: 16vh;
+    padding-left: 0px;
+}
+
+.timeline li:last-child {
+    padding-bottom: 0;
+}
+
+.timeline li:before {
+    content: '';
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;;
+    top: 0;
+    left: 6px;
+    width: 2.5px;
+}
+
+.timeline li:after {
+    content: '';
+    position: absolute;
+    left: 0.3px;
+    top: 0px;
+    height: 14px;
+    width: 14px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+}
+
+.timeline .active:after {
+    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.317);
+}
+
+.nss-img {
+    height: 400px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-55%);
+}
+
+.nss-details {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 20px;
+    width: fit-content;
+}
+
+.nss-details .heading{
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.nss-details .heading h2{
+    color: #14054B;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.nss-details .need-help{
+    padding: 30px;
+    position: relative;
+    overflow: auto;
+    margin: auto;
+}
+
+.nss-details .need-help p{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.nss-details .need-help .btn{
+    margin-top: 5px;
+    float: right;
+}
+
+.nss-details .wrap{
+    background-color: rgba(48, 48, 48, 0.6);
+    color: #ffffff;
+    display: block;
+    width: fit-content;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+
+.nss-details .btn {
+    background-color: rgba(50, 48, 48, 0.6);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 7px 25px;
+    border-radius: 10px;
+}
+
+@media(max-width: 1250px) {
+    .nss-img {
+        height: 340px;
+    }
+}
+
+@media(max-width: 991px){
+    .nss-img{
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .nss-details .heading{
+        margin-bottom: 20px;
+    }    
+}
+
+@media(max-width: 450px) {
+    .nss-details .need-help {
+        padding: 10px;
+    }
+    .nss-details .need-help p{
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+    .nss-details .heading{
+        margin-bottom: 60px;
+    }    
+    .nss-details .heading h2 {
+        font-size: 25px;
+    }
+    .nss-details .wrap {
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+
+
+
+.social-icons {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.social-icons span {
+    color:  #14054B;
+    font-size: 30px;
+    margin: 10px 10px 0 0;
+    opacity: 0.8;
+}
