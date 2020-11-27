@@ -19,7 +19,7 @@ a:hover {
 
 #header .logo img {
 	height: 60px;
-	margin: 10px 0 5px 0;
+	margin: 10px 0 5px 30px;
 }
 
 
@@ -36,11 +36,12 @@ a:hover {
 ---------------------------------------------------------------*/
 
 /* Desktop Navigation */
+
 .nav-menu ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	display: flex;
+    display: flex;
 }
 
 .nav-menu li a {
@@ -70,8 +71,11 @@ a:hover {
 @media (min-width: 992px) {
 	.nav-menu li a {
 		font-size: 20px;
-		padding-left: 15px;
-	}
+		padding-left: 25px;
+    }
+    .nav-menu{
+        margin-right: 30px;
+    }
 }
 
 
